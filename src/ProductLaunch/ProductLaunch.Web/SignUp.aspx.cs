@@ -22,7 +22,7 @@ namespace ProductLaunch.Web
             using (var context = new ProductLaunchContext())
             {
                 _Countries["-"] = context.Countries.Single(x => x.CountryCode == "-");
-;                foreach (var country in context.Countries.Where(x=>x.CountryCode != "-").OrderBy(x => x.CountryName))
+                foreach (var country in context.Countries.Where(x=>x.CountryCode != "-").OrderBy(x => x.CountryName))
                 {
                     _Countries[country.CountryCode] = country;
                 }
